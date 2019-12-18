@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>		
+	<package name="User" extends="struts-default">
+	
+		<global-results>
+			<result name="success" type="redirect">/findAll.action</result>		
+			<result name="false" type="redirect">/login.jsp</result>		
+		</global-results>			
+		<action name="findAll" class="com.woniu.action.UserAction" method="findAll">
+			<result name="list">/index.jsp</result>
+		</action>
+		<action name="delete" class="com.woniu.action.UserAction" method="delete">		
+		</action>
+		<action name="update" class="com.woniu.action.UserAction" method="update">		
+		</action>
+		<action name="findOne" class="com.woniu.action.UserAction" method="findOne">
+			<result name="hhh">/UsersUpdate.jsp</result>		
+		</action>
+		<action name="save" class="com.woniu.action.UserAction" method="save">				
+		</action>
+	</package>
+</struts>
